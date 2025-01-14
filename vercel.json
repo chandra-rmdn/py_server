@@ -8,7 +8,7 @@
     ],
     "routes": [
         {
-            "src": "/mahasiswa/(.*)",
+            "src": "/mahasiswa(.*)",
             "dest": "server2.py"
         }
     ]
