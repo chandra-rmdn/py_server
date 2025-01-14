@@ -26,13 +26,13 @@ def tambah_mahasiswa():
     if not data.get('nama') or not data.get('jurusan') or not data.get('semester'):
         return jsonify({"error": "Data tidak lengkap"}), 400
     
-    mahasiswa = {
-        "id": id_counter,
-        "nama": data['nama'],
-        "nim": nim,
-        "jurusan": data['jurusan'],
-        "semester": data['semester']
-    }
+    mahasiswa = OrderedDict([
+        ("id", id_counter),
+        ("nama", data['nama']),
+        ("nim", nim),
+        ("jurusan", data['jurusan']),
+        ("semester", data['semester'])
+    ])
     data_mahasiswa.append(mahasiswa)
     id_counter += 1
     nim += 1
