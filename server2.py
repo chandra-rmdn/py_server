@@ -63,4 +63,4 @@ def hapus_mahasiswa(id_mahasiswa):
     return jsonify({"message": "Mahasiswa berhasil dihapus"}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=2004)
